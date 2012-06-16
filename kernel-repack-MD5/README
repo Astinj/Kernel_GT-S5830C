@@ -1,0 +1,6 @@
+
+	Automatic kernel repack tool with MD5SUM
+	----------------------------------------
+
+1 split.sh to split boot.img in both files
+2 repack.sh to creat boot.img from both files
