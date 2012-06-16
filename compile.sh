@@ -1,6 +1,7 @@
 #!/bin/sh
 xterm -e '
-rm ./Kernel_OutPut/* ./Modules_OutPut/system/lib/modules/*; clear
+rm -Rf ./Kernel_OutPut ./Modules_OutPut; clear
+mkdir ./Kernel_OutPut && mkdir -p ./Modules_OutPut/system/lib/modules
 
 #Android Toolchain PATH
 export ARCH=arm
