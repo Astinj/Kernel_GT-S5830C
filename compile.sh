@@ -7,7 +7,7 @@ mkdir ./Kernel_OutPut && mkdir -p ./Modules_OutPut/system/lib/modules
 export ARCH=arm
 export CCOMPILE=$CROSS_COMPILE
 export CROSS_COMPILE=arm-eabi-
-export PATH=$PATH:$PWD/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/
+export PATH=$PATH:$PWD/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
 
 cd common
 
