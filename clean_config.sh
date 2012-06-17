@@ -1,5 +1,5 @@
 #!/bin/sh
 xterm -e '
-rm ./Kernel_OutPut/* ./Modules_OutPut/system/lib/modules/*; clear
+rm -Rf ./Kernel_OutPut/ ./Modules_OutPut/; clear
 cd common
 make distclean; echo "compilations and configurations clear!!!"; sleep 5'
