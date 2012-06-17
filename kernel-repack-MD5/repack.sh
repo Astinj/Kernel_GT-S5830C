@@ -1,5 +1,5 @@
 #!/bin/sh
-xterm -e '
+xterm -title 'MERGE RANDISK AND zImage TO boot.img' -e '
 if [ -f zImage ] && [ boot.img-kernel ]; then
 	rm boot.img-kernel; clear; mv zImage boot.img-kernel; clear
 else
@@ -10,11 +10,13 @@ if [ -f ../boot.img-ramdisk.gz ] && [ -f ../boot.img-kernel ]; then
 	md5sum ../boot.img-kernel > md5
 echo "./mkbootimg --kernel ../boot.img-kernel --kernelMD5 " > run.sh
 dd if=md5 of=run.sh bs=1 seek=52 count=32
-echo " --base 0x81600000 --ramdisk ../boot.img-ramdisk.gz --pagesize 4096 --ramdiskaddr 0x82600000 -o ../boot.img" >> run.sh
+echo " --ramdisk ../boot.img-ramdisk.gz --base 0x81600000 -o ../boot.img" >> run.sh
 else
 	echo "cant read files"; sleep 5; exit
 fi
-rm ../boot.img; clear; sleep 5
+rm ../boot.img ../PDA-kernel.tar; clear; sleep 5
 chmod +x run.sh mkbootimg && ./run.sh && rm run.sh md5
+cd ..
+tar -cf PDA-kernel.tar boot.img
 echo "boot.img READY"
 echo "hit <Enter> to close!"; read'

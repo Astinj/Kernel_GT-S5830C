@@ -1,5 +1,5 @@
 #!/bin/sh
-xterm -e '
+xterm -title 'SPLIT boot.img to RAMDISK and KERNEL' -e '
 cd mkbootimg
 if [ -f ../boot.img ]; then
 	rm ../boot.img-ramdisk.gz ../boot.img-kernel; clear; sleep 5

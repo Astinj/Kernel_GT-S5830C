@@ -1,5 +1,5 @@
 #!/bin/sh
-xterm -e '
+xterm -title 'DECOMPRESS RAMDISK' -e '
 if [ -f ./ramdisk/default.prop ] || [ -f ./ramdisk/init* ]; then
 	echo "please dele directory ./ramdisk/"; sleep 5; exit
 else
