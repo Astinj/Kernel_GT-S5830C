@@ -8,6 +8,8 @@ sudo apt-get autoremove
 sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
 echo "Select <No> in next screen!!!"; echo "hit <Enter> to continue"; read; sudo dpkg-reconfigure -plow dash
 
+cd ..
+
 #if [ -f arm-2012.03-56-arm-none-eabi.bin ]; then
 #	chmod +x arm-2012.03-56-arm-none-eabi.bin && ./arm-2012.03-56-arm-none-eabi.bin
 #else

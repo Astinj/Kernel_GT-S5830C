@@ -9,7 +9,7 @@ export CCOMPILE=$CROSS_COMPILE
 #export CROSS_COMPILE=arm-none-eabi-
 #export PATH=$PATH:~/CodeSourcery/Sourcery_CodeBench_Lite_for_ARM_EABI/bin
 export CROSS_COMPILE=arm-eabi-
-export PATH=$PATH:$PWD/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+export PATH=$PATH:~/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
 
 cd common
 
