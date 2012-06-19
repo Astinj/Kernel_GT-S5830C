@@ -8,12 +8,16 @@ sudo apt-get autoremove
 sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so
 echo "Select <No> in next screen!!!"; echo "hit <Enter> to continue"; read; sudo dpkg-reconfigure -plow dash
 
-cd ..
+cd ~
 
-if [ -f ./platform_prebuilt/Android.mk ]; then
+if [ -f ~/platform_prebuilt/.git/config ]; then
+	echo "Update Cross Compiler"
 	git pull https://github.com/android/platform_prebuilt.git
+	echo "Cross Compiler updated!!!"
 else
-	rm -Rf platform_prebuilt
+	echo "Download Cross Compiler"
 	git clone https://github.com/android/platform_prebuilt.git
+	echo "Cross Compiler READY!!!"
 fi
-'
+echo "Evertyng Installed!!!"
+sleep 5'
