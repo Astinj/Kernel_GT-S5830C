@@ -3,6 +3,12 @@ xterm -title 'Compile' -e '
 rm -Rf ./Kernel_OutPut ./Modules_OutPut; clear
 mkdir ./Kernel_OutPut && mkdir -p ./Modules_OutPut/system/lib/modules
 
+#Android Toolchain PATH
+export ARCH=arm
+export CCOMPILE=$CROSS_COMPILE
+export CROSS_COMPILE=arm-eabi-
+export PATH=$PATH:~/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+
 cd common
 
 if [ -f .config ]; then
