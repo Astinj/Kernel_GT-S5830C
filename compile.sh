@@ -6,8 +6,8 @@ mkdir ./Kernel_OutPut && mkdir -p ./Modules_OutPut/system/lib/modules
 #Android Toolchain PATH
 export ARCH=arm
 export CCOMPILE=$CROSS_COMPILE
-export CROSS_COMPILE=arm-eabi-
-export PATH=$PATH:~/platform_prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+export CROSS_COMPILE=arm-linux-gnueabi-
+export PATH=$PATH:/usr/bin
 
 cd common
 
@@ -16,7 +16,7 @@ if [ -f .config ]; then
 else
 	make mrproper && make bcm21553_cooperve_defconfig
 fi
-	make menuconfig && make CONFIG_DEBUG_SECTION_MISMATCH=y
+	make menuconfig && make -j3 CONFIG_DEBUG_SECTION_MISMATCH=y
 
 cd ..
 

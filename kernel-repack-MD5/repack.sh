@@ -17,6 +17,6 @@ fi
 rm ../boot.img ../PDA-kernel.tar; clear; sleep 5
 chmod +x run.sh mkbootimg && ./run.sh && rm run.sh md5
 cd ..
-tar -cf PDA-kernel.tar boot.img
+tar -cvf PDA-kernel.tar boot.img
 echo "boot.img READY"
 echo "hit <Enter> to close!"; read'
