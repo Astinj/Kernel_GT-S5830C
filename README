@@ -1,9 +1,9 @@
 	Kernel Samsung GT-S5830C-i-M derivations
 	----------------------------------------
-To compile kernel use the linux i386 based in Debian. (like xubuntu)
+To compile kernel use xubuntu x86_64
 
 1 execute install_dep.sh to install the packages needed to compile kernel.
-2 execute compile.sh, to configure and compile.
-3 execute split.sh and copy the file ./Kernel_OutPut/zImage to ./kernel-repack-MD5 and execute repack.sh
-
-att. inside folder ./Modules_OutPut stay modules.ko
+2 execute compile.sh, to configure and compile kernel.
+3 execute 01-split-boot.img.sh and copy the file ./Kernel_OutPut/zImage to folder ./kernel-repack-MD5
+4 execute 02-decompress-ramdisk.sh and copy modules.ko from ./Modules_OutPut/ramdisk/ to ./kernel-repack-MD5/ramdisk/ and execute 03-compress-ramdisk.sh
+5 execute 04-creat-boot.img.sh

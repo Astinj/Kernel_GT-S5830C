@@ -15,13 +15,16 @@ cd common
 if [ -f .config ]; then
 	make clean
 else
-	make mrproper && make bcm21553_cooperve_defconfig
+	make distclean && make bcm21553_cooperve_defconfig
 fi
-	make xconfig && make -j3 CONFIG_DEBUG_SECTION_MISMATCH=y
+	make xconfig && make -j3 modules && find ../ -name '*.ko' -exec cp -v {} ../Modules_OutPut/system/lib/modules \;
+	cd ../Modules_OutPut/system/lib/modules
+	mv fs*.ko j4fs.ko sec_param.ko rfs*.ko ../../../ramdisk/
+	cd ../../../../common
+	echo "Modules Compiled and stored in folder Modules_OutPut"; echo "Hit <Enter> to compile Kernel"; read
+	make -j3 zImage #CONFIG_INITRAMFS_SOURCE=../kernel-repack-MD5/ramdisk
 
 cd ..
-
-find . -name '*.ko' -exec cp -v {} ./Modules_OutPut/system/lib/modules \;
 
 cp ./common/arch/arm/boot/zImage ./Kernel_OutPut/
 
@@ -30,7 +33,5 @@ if [ -f ./Kernel_OutPut/zImage ]; then
 else
 	echo "Compile Fail"; read; exit
 fi
-cd Modules_OutPut/system/lib/modules
-mv fs*.ko j4fs.ko sec_param.ko rfs*.ko ../../../ramdisk/
-echo "zImage is inside ./Kernel_OutPut and modules in ./Modules_OutPut"
+echo "zImage is inside ./Kernel_OutPut"
 echo "hit <Enter> to continue" read'
