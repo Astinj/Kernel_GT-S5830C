@@ -17,12 +17,9 @@ if [ -f .config ]; then
 else
 	make distclean && make bcm21553_cooperve_defconfig
 fi
-	make xconfig && make -j3 modules && find ../ -name '*.ko' -exec cp -v {} ../Modules_OutPut/system/lib/modules \;
-	cd ../Modules_OutPut/system/lib/modules
-	mv fs*.ko j4fs.ko sec_param.ko rfs*.ko ../../../ramdisk/
-	cd ../../../../common
+	make xconfig && make -j3 modules && find . ../modules -name '*.ko' -exec cp -v {} ../Modules_OutPut/system/lib/modules \;
 	echo "Modules Compiled and stored in folder Modules_OutPut"; echo "Hit <Enter> to compile Kernel"; read
-	make -j3 zImage #CONFIG_INITRAMFS_SOURCE=../kernel-repack-MD5/ramdisk
+	make clean && make -j3 zImage && find . ../modules -name '*.ko' -exec cp -v {} ../Modules_OutPut/ramdisk \;
 
 cd ..
 
