@@ -1,0 +1,235 @@
+scripts/kconfig/conf -s arch/arm/Kconfig
+  CHK     include/linux/version.h
+  UPD     include/linux/version.h
+  CHK     include/generated/utsrelease.h
+  UPD     include/generated/utsrelease.h
+  HOSTCC  scripts/kallsyms
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  Generating include/generated/mach-types.h
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/conmakehash
+  CC      kernel/bounds.s
+  GEN     include/generated/bounds.h
+  CC      arch/arm/kernel/asm-offsets.s
+  HOSTCC  scripts/bin2c
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  GEN     include/generated/asm-offsets.h
+  CALL    scripts/checksyscalls.sh
+  CC [M]  crypto/seqiv.o
+  CC [M]  crypto/xcbc.o
+  CC [M]  drivers/char/raw.o
+  CC [M]  crypto/md4.o
+  CC [M]  crypto/rmd128.o
+  CC [M]  drivers/char/tpm/tpm.o
+  CC [M]  crypto/rmd160.o
+  CC [M]  drivers/char/tpm/tpm_nsc.o
+  CC [M]  crypto/rmd256.o
+  CC [M]  drivers/char/tpm/tpm_atmel.o
+  CC [M]  crypto/rmd320.o
+  CC [M]  ../modules/../modules/drivers/sound/brcm/headset/brcm_headset.o
+  CC [M]  drivers/input/gameport/gameport.o
+  CC [M]  crypto/sha256_generic.o
+  LD [M]  ../modules/../modules/drivers/sound/brcm/headset/brcm-headsetsw.o
+  CC [M]  ../modules/../modules/drivers/video/ge/ge_drv/ge_drv.o
+  CC [M]  drivers/input/gameport/lightning.o
+  CC [M]  crypto/sha512_generic.o
+  CC [M]  ../modules/../modules/drivers/video/ge/gememalloc/gememalloc.o
+  CC [M]  drivers/input/gameport/ns558.o
+  CC [M]  ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/hx170dec.o
+  CC [M]  drivers/input/serio/serport.o
+  CC [M]  crypto/wp512.o
+  CC [M]  drivers/input/serio/serio_raw.o
+  CC [M]  ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/h6270enc.o
+  CC [M]  crypto/tgr192.o
+  CC [M]  crypto/gf128mul.o
+cat: ../modules/../modules/drivers/video/hantro//modules.order: input file is output file
+  CC [M]  crypto/pcbc.o
+  CC [M]  drivers/mfd/sm501.o
+  CC [M]  crypto/cts.o
+  CC [M]  crypto/lrw.o
+  CC [M]  crypto/xts.o
+  CC [M]  crypto/ctr.o
+  CC [M]  crypto/gcm.o
+  CC [M]  drivers/mfd/htc-pasic3.o
+  CC [M]  crypto/ccm.o
+  CC [M]  drivers/misc/eeprom/eeprom_93cx6.o
+  CC [M]  crypto/cryptd.o
+  CC [M]  crypto/fcrypt.o
+  CC [M]  crypto/blowfish.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_linux.o
+  CC [M]  crypto/serpent.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_common.o
+  CC [M]  crypto/camellia.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_cdc.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_linux_sched.o
+  CC [M]  crypto/cast5.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_sdio.o
+  CC [M]  lib/crc-itu-t.o
+  CC [M]  lib/crc7.o
+  CC [M]  lib/lzo/lzo1x_compress.o
+  CC [M]  crypto/cast6.o
+  CC [M]  lib/lzo/lzo1x_decompress.o
+  CC [M]  crypto/tea.o
+  LD [M]  lib/lzo/lzo_compress.o
+  LD [M]  lib/lzo/lzo_decompress.o
+  CC [M]  crypto/khazad.o
+  CC [M]  crypto/anubis.o
+  CC [M]  crypto/seed.o
+  CC [M]  crypto/salsa20_generic.o
+  CC [M]  crypto/lzo.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_custom_gpio.o
+  CC [M]  crypto/ansi_cprng.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_custom_sec.o
+  CC [M]  crypto/tcrypt.o
+  CC [M]  drivers/net/wireless/4330/src/dhd/sys/dhd_bta.o
+  CC [M]  drivers/net/wireless/4330/src/shared/aiutils.o
+  CC [M]  drivers/net/wireless/4330/src/shared/bcmutils.o
+  CC [M]  crypto/ghash-generic.o
+  CC [M]  drivers/net/wireless/4330/src/shared/bcmwifi.o
+  CC [M]  drivers/net/wireless/4330/src/shared/hndpmu.o
+  CC [M]  drivers/net/wireless/4330/src/shared/linux_osl.o
+  CC [M]  drivers/ssb/main.o
+  CC [M]  drivers/usb/gadget_brcm/brcm_test_drv.o
+  CC [M]  drivers/net/wireless/4330/src/shared/sbutils.o
+  CC [M]  drivers/usb/gadget_brcm/brcm_switch.o
+  CC [M]  drivers/ssb/scan.o
+  CC [M]  drivers/ssb/driver_chipcommon.o
+  CC [M]  drivers/net/wireless/4330/src/shared/siutils.o
+  CC [M]  drivers/ssb/driver_chipcommon_pmu.o
+  CC [M]  drivers/net/wireless/4330/src/shared/bcmevent.o
+  LD [M]  drivers/ssb/ssb.o
+  CC [M]  drivers/net/wireless/4330/src/bcmsdio/sys/bcmsdh_sdmmc.o
+  CC [M]  drivers/net/wireless/4330/src/bcmsdio/sys/bcmsdh.o
+  CC [M]  drivers/net/wireless/4330/src/bcmsdio/sys/bcmsdh_linux.o
+  CC [M]  drivers/net/wireless/4330/src/bcmsdio/sys/bcmsdh_sdmmc_linux.o
+  CC [M]  drivers/net/wireless/4330/src/wl/sys/wl_iw.o
+  LD [M]  drivers/net/wireless/4330/bcm4330.o
+  Building modules, stage 2.
+  MODPOST 60 modules
+WARNING: modpost: Found 1 section mismatch(es).
+To see full details build your kernel with:
+'make CONFIG_DEBUG_SECTION_MISMATCH=y'
+  CC      ../modules/../modules/drivers/sound/brcm/headset/brcm-headsetsw.mod.o
+  CC      ../modules/../modules/drivers/video/ge/ge_drv/ge_drv.mod.o
+  CC      ../modules/../modules/drivers/video/ge/gememalloc/gememalloc.mod.o
+  CC      ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/h6270enc.mod.o
+  CC      ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/hx170dec.mod.o
+  CC      crypto/ansi_cprng.mod.o
+  CC      crypto/anubis.mod.o
+  CC      crypto/blowfish.mod.o
+  CC      crypto/camellia.mod.o
+  CC      crypto/cast5.mod.o
+  CC      crypto/cast6.mod.o
+  CC      crypto/ccm.mod.o
+  CC      crypto/cryptd.mod.o
+  CC      crypto/ctr.mod.o
+  CC      crypto/cts.mod.o
+  CC      crypto/fcrypt.mod.o
+  CC      crypto/gcm.mod.o
+  CC      crypto/gf128mul.mod.o
+  CC      crypto/ghash-generic.mod.o
+  CC      crypto/khazad.mod.o
+  CC      crypto/lrw.mod.o
+  CC      crypto/lzo.mod.o
+  CC      crypto/md4.mod.o
+  CC      crypto/pcbc.mod.o
+  CC      crypto/rmd128.mod.o
+  CC      crypto/rmd160.mod.o
+  CC      crypto/rmd256.mod.o
+  CC      crypto/rmd320.mod.o
+  CC      crypto/salsa20_generic.mod.o
+  CC      crypto/seed.mod.o
+  CC      crypto/seqiv.mod.o
+  CC      crypto/serpent.mod.o
+  CC      crypto/sha256_generic.mod.o
+  CC      crypto/sha512_generic.mod.o
+  CC      crypto/tcrypt.mod.o
+  CC      crypto/tea.mod.o
+  CC      crypto/tgr192.mod.o
+  CC      crypto/wp512.mod.o
+  CC      crypto/xcbc.mod.o
+  CC      crypto/xts.mod.o
+  CC      drivers/char/raw.mod.o
+  CC      drivers/char/tpm/tpm.mod.o
+  CC      drivers/char/tpm/tpm_atmel.mod.o
+  CC      drivers/char/tpm/tpm_nsc.mod.o
+  CC      drivers/input/gameport/gameport.mod.o
+  CC      drivers/input/gameport/lightning.mod.o
+  CC      drivers/input/gameport/ns558.mod.o
+  CC      drivers/input/serio/serio_raw.mod.o
+  CC      drivers/input/serio/serport.mod.o
+  CC      drivers/mfd/htc-pasic3.mod.o
+  CC      drivers/mfd/sm501.mod.o
+  CC      drivers/misc/eeprom/eeprom_93cx6.mod.o
+  CC      drivers/net/wireless/4330/bcm4330.mod.o
+  CC      drivers/ssb/ssb.mod.o
+  CC      drivers/usb/gadget_brcm/brcm_switch.mod.o
+  CC      drivers/usb/gadget_brcm/brcm_test_drv.mod.o
+  CC      lib/crc-itu-t.mod.o
+  CC      lib/crc7.mod.o
+  CC      lib/lzo/lzo_compress.mod.o
+  CC      lib/lzo/lzo_decompress.mod.o
+  LD [M]  ../modules/../modules/drivers/sound/brcm/headset/brcm-headsetsw.ko
+  LD [M]  ../modules/../modules/drivers/video/ge/ge_drv/ge_drv.ko
+  LD [M]  ../modules/../modules/drivers/video/ge/gememalloc/gememalloc.ko
+  LD [M]  ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/h6270enc.ko
+  LD [M]  ../modules/../modules/drivers/video/hantro/ldriver/kernel_26x/hx170dec.ko
+  LD [M]  crypto/ansi_cprng.ko
+  LD [M]  crypto/anubis.ko
+  LD [M]  crypto/blowfish.ko
+  LD [M]  crypto/camellia.ko
+  LD [M]  crypto/cast5.ko
+  LD [M]  crypto/cast6.ko
+  LD [M]  crypto/ccm.ko
+  LD [M]  crypto/cryptd.ko
+  LD [M]  crypto/ctr.ko
+  LD [M]  crypto/cts.ko
+  LD [M]  crypto/fcrypt.ko
+  LD [M]  crypto/gcm.ko
+  LD [M]  crypto/ghash-generic.ko
+  LD [M]  crypto/gf128mul.ko
+  LD [M]  crypto/khazad.ko
+  LD [M]  crypto/lrw.ko
+  LD [M]  crypto/lzo.ko
+  LD [M]  crypto/md4.ko
+  LD [M]  crypto/pcbc.ko
+  LD [M]  crypto/rmd128.ko
+  LD [M]  crypto/rmd160.ko
+  LD [M]  crypto/rmd256.ko
+  LD [M]  crypto/rmd320.ko
+  LD [M]  crypto/salsa20_generic.ko
+  LD [M]  crypto/seed.ko
+  LD [M]  crypto/seqiv.ko
+  LD [M]  crypto/serpent.ko
+  LD [M]  crypto/sha256_generic.ko
+  LD [M]  crypto/sha512_generic.ko
+  LD [M]  crypto/tcrypt.ko
+  LD [M]  crypto/tea.ko
+  LD [M]  crypto/tgr192.ko
+  LD [M]  crypto/xcbc.ko
+  LD [M]  crypto/wp512.ko
+  LD [M]  crypto/xts.ko
+  LD [M]  drivers/char/raw.ko
+  LD [M]  drivers/char/tpm/tpm.ko
+  LD [M]  drivers/char/tpm/tpm_atmel.ko
+  LD [M]  drivers/char/tpm/tpm_nsc.ko
+  LD [M]  drivers/input/gameport/gameport.ko
+  LD [M]  drivers/input/gameport/lightning.ko
+  LD [M]  drivers/input/gameport/ns558.ko
+  LD [M]  drivers/input/serio/serio_raw.ko
+  LD [M]  drivers/input/serio/serport.ko
+  LD [M]  drivers/mfd/htc-pasic3.ko
+  LD [M]  drivers/mfd/sm501.ko
+  LD [M]  drivers/misc/eeprom/eeprom_93cx6.ko
+  LD [M]  drivers/net/wireless/4330/bcm4330.ko
+  LD [M]  drivers/usb/gadget_brcm/brcm_switch.ko
+  LD [M]  drivers/ssb/ssb.ko
+  LD [M]  drivers/usb/gadget_brcm/brcm_test_drv.ko
+  LD [M]  lib/crc-itu-t.ko
+  LD [M]  lib/lzo/lzo_compress.ko
+  LD [M]  lib/crc7.ko
+  LD [M]  lib/lzo/lzo_decompress.ko
