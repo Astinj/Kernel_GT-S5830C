@@ -1,7 +1,7 @@
 #!/bin/bash
 xterm -title 'Clean all' -e '
 
-rm -Rf ./Kernel_OutPut/ ./Modules_OutPut/; clear
+rm -Rf ./Kernel_OutPut/ ./Modules_OutPut/ ./logs/ ./kernel-repack-MD5/boot.im* ./kernel-repack-MD5/ramdisk/; clear
 
 #Android Toolchain PATH
 export ARCH=arm
